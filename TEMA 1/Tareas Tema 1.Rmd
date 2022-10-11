@@ -45,11 +45,11 @@ Riesgo.relativo<-function(Matriz)
 
 ```{r apli_func, echo=FALSE}
 
-Matriz<-matrix(c(172,90,173,346),nrow=2,ncol=2)
-Matriz
+Matriz12<-matrix(c(172,90,173,346),nrow=2,ncol=2)
+Matriz12
 
-Cociente.Ventajas(Matriz)
-Riesgo.relativo(Matriz)
+Cociente.Ventajas(Matriz12)
+Riesgo.relativo(Matriz12)
 
 ```
 
@@ -57,13 +57,28 @@ Riesgo.relativo(Matriz)
 
 ```{r apli_func, echo=FALSE}
 
-Matriz13<-matrix(c(510,1601,412.36,162.52),nrow=2,ncol=2)
-Matriz13i<-matrix(c(1601,510,162.52,412.36),nrow=2,ncol=2)
+Matriz13<-matrix(c(510,1601,412368,162527),nrow=2,ncol=2)
+Matriz13i<-matrix(c(1601,510,162527,412368),nrow=2,ncol=2)
 
 Matriz13
+Matriz13i
 
 Cociente.Ventajas(Matriz13)
 Riesgo.relativo(Matriz13)
 Riesgo.relativo(Matriz13i)
 
+```
+
+
+
+### Cuestionario 1
+
+```{r cuest1, echo=FALSE}
+
+MatrizC<-matrix(c(14,26,24,14),nrow=2,ncol=2)
+
+MatrizC
+
+Cociente.Ventajas(MatrizC)
+Riesgo.relativo(MatrizC)
 ```
