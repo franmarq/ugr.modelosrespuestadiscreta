@@ -1,0 +1,69 @@
+---
+title: "UGR Modelos de Respuesta Discreta"
+author: "franmarq@gmail.com"
+date: '2022-10-10'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Creacion de Matrices
+
+```{r matriz}
+Matriz1<-matrix(c(1,2,3,4,5,6),nrow=2,ncol=3)
+Matriz1
+Matriz2<-matrix(c(1,2,3,4,5,6),nrow=2,ncol=3,byrow=T) 
+Matriz2
+Matriz3<-matrix(c(1,2,3,4,5,6),nrow=3,ncol=2)
+Matriz3
+Matriz4<-matrix(c(1,2,3,4,5,6),nrow=3,ncol=2,byrow=T)
+Matriz4
+```
+
+
+## Funcion cociente de Ventajas y riesgo relativo
+
+
+```{r Def_func, echo=FALSE}
+Cociente.Ventajas<-function(Matriz)
+  {
+    Ventaja<-(Matriz[1,1]*Matriz[2,2])/(Matriz[1,2]*Matriz[2,1])
+    return(Ventaja)
+  }
+Riesgo.relativo<-function(Matriz)
+  {
+  Riesgo<-(Matriz[1,1]/(Matriz[1,1]+Matriz[1,2]))/(Matriz[2,1]/(Matriz[2,1]+Matriz[2,2]))
+  return(Riesgo)
+  }
+```
+
+## Aplicacion - Funcion cociente de Ventajas y riesgo relativo
+
+### Ejercicio 12
+
+```{r apli_func, echo=FALSE}
+
+Matriz<-matrix(c(172,90,173,346),nrow=2,ncol=2)
+Matriz
+
+Cociente.Ventajas(Matriz)
+Riesgo.relativo(Matriz)
+
+```
+
+### Ejercicio 13
+
+```{r apli_func, echo=FALSE}
+
+Matriz13<-matrix(c(510,1601,412.36,162.52),nrow=2,ncol=2)
+Matriz13i<-matrix(c(1601,510,162.52,412.36),nrow=2,ncol=2)
+
+Matriz13
+
+Cociente.Ventajas(Matriz13)
+Riesgo.relativo(Matriz13)
+Riesgo.relativo(Matriz13i)
+
+```
